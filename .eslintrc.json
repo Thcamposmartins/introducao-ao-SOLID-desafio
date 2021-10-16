@@ -7,7 +7,7 @@
   "extends": [
     "airbnb-base",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
+    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -17,14 +17,14 @@
   },
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
-    "camelcase": "off",
+    "camelcase": "on",
     "prettier/prettier": "error",
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
       "error",
       {
         "selector": "interface",
-        "format": ["PascalCase"],
+        "format": ["camelCase"],
         "custom": {
           "regex": "^I[A-Z]",
           "match": true
